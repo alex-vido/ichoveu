@@ -117,6 +117,7 @@ export async function handleSearch(event) {
   const searchInput = document.getElementById('search-input');
   const searchValue = searchInput.value;
   const data = await searchCities(searchValue);
+  ul.appendChild(data);
   // seu código aqui
-  // console.log(data);
+  console.log(data);
 }
