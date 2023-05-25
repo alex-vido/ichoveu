@@ -110,12 +110,13 @@ export function createCityElement(cityInfo) {
 /**
  * Lida com o evento de submit do formulário de busca
  */
-export function handleSearch(event) {
+export async function handleSearch(event) {
   event.preventDefault();
   clearChildrenById('cities');
-
+  const ul = document.getElementById('cities');
   const searchInput = document.getElementById('search-input');
   const searchValue = searchInput.value;
-  searchCities(searchValue);
+  const data = await searchCities(searchValue);
   // seu código aqui
+  // console.log(data);
 }
