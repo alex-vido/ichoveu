@@ -118,5 +118,5 @@ export async function handleSearch(event) {
   const data = await searchCities(searchValue);
   data.forEach(async (city) => {
     await getWeatherByCity(city.url);
-  })
+  });
 }
